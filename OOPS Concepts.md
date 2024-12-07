@@ -64,16 +64,11 @@
 > class will have to give implementaon of the abstract methods defined
 > in abstract class
 > *Example:*
-
-![](![image](https://github.com/user-attachments/assets/d57097a3-f3e0-47fe-9124-e185ab2a5538)
-){width="6.354165573053368in"
-height="3.386111111111111in"}
-
-![](vertopal_a438e79edf82470595292e19d6f37602/media/image3.png){width="6.354165573053368in"
-height="3.4166666666666665in"}
-
-> Output:
->
-> ![](vertopal_a438e79edf82470595292e19d6f37602/media/image4.png){width="4.354166666666667in"
-> height="1.0097211286089238in"}
+> ```java
+// Java Example
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
 > 
