@@ -19,7 +19,7 @@
 >
 > In java, Abstraction can be achieved in two ways:
 >
-> **-** Abstract classes
+> **-** Abstract classes\
 > **-** Interfaces
 >
 > 2\. **Encapsulaon** : Encapsulaon is a process of *Binding data and methods within a class* . Think of it like showing the essenal details of a class by using the access control modifiers (*public, private,protected* ). So, we can say that Encapsulaon leads to the desired
