@@ -63,3 +63,16 @@
 > **-** The first non-abstract class which is extending from an abstract
 > class will have to give implementaon of the abstract methods defined
 > in abstract class
+> *Example:*
+
+![](vertopal_a438e79edf82470595292e19d6f37602/media/image2.png){width="6.354165573053368in"
+height="3.386111111111111in"}
+
+![](vertopal_a438e79edf82470595292e19d6f37602/media/image3.png){width="6.354165573053368in"
+height="3.4166666666666665in"}
+
+> Output:
+>
+> ![](vertopal_a438e79edf82470595292e19d6f37602/media/image4.png){width="4.354166666666667in"
+> height="1.0097211286089238in"}
+> 
