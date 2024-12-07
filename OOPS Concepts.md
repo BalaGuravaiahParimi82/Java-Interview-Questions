@@ -9,11 +9,11 @@
 >
 > Let's take a look at them:
 >
-> 1\. **Abstraction** : Abstraction is a process of hiding the implementaon details and showing only funconality to the user.
+> 1\. **Abstraction** : Abstraction is a process of hiding the implementation details and showing only functionality to the user.
 >
 > Real world examples:
 >
-> **-** TV remote: To start the TV, you have to press the power buon, you don't have to know about the internal circuit operaons like how infrared waves are passing.
+> **-** TV remote: To start the TV, you have to press the power button, you don't have to know about the internal circuit operations like how infrared waves are passing.
 >
 > **-** Car gears: We know what happens when we change the gear. But we don't know how changing gear works under the hood, that information is irrelevant to us, so it is abstracted.
 >
@@ -33,12 +33,13 @@
 >
 > Java does not allow mulple inheritance through classes but it allows it through interfaces.
 >
-> 4\. **Polymorphism** : Poly means many and Morph means forms. Polymorphism is the process in which an object or funcon takes different > forms. There are 2 types of Polymorphism :
+> 4\. **Polymorphism** : Poly means many and Morph means forms. Polymorphism is the process in which an object or function takes different forms.\
+> There are 2 types of Polymorphism :
 >
 > **-** Compile Time Polymorphism (Method Overloading)
 >
 > **-** Run Time Polymorphism (Method Overriding)
 >
-> In Method overloading, two or more methods in one class have the same method name but different arguments. It is called as *Compile time polymorphism* because it is decided at compile me which overloaded method will be called.
+> In Method overloading, two or more methods in one class have the same method name but different arguments. It is called as *Compile time polymorphism* because it is decided at compile time which overloaded method will be called.
 >
-> Overriding means when we have two methods with same name and same parameters in parent and child class. Through overriding, child class can provide specific implementaon for the method which is already defined in the parent class.
+> Overriding means when we have two methods with same name and same parameters in parent and child class. Through overriding, child class can provide specific implementation for the method which is already defined in the parent class.
