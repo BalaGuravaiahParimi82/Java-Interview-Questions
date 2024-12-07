@@ -64,18 +64,22 @@
 > class will have to give implementaon of the abstract methods defined
 > in abstract class
 > *Example:*
-> ```java
-> package com.tech;
-> public abstract class MyAbstractClass {
->
->    // abstract method
->     abstract void print();
->    public void display()
->   {
->     System.out.println("In display method");
->   }
->
-# AbstractDemo Class Example
+
+This is an example of an abstract class `MyAbstractClass` with an abstract method `print()` and a concrete method `display()`.
+
+```java
+package com.tech;
+
+public abstract class MyAbstractClass {
+	
+    // abstract method
+    abstract void print();
+	
+    public void display() {
+        System.out.println("In display method");
+    }
+}
+
 
 This is an example of an `AbstractDemo` class that extends an abstract class and overrides its methods.
 
