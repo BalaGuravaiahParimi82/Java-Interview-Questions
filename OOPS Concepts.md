@@ -2,14 +2,14 @@
 >
 > Answer: 4 pillars of OOPS are:
 >
-> 1\. Abstracon\
-> 2. Encapsulaon\
+> 1\. Abstraction\
+> 2. Encapsulation\
 > 3. Inheritance\
 > 4. Polymorphism
 >
 > Let's take a look at them:
 >
-> 1\. **Abstracon** : Abstracon is a process of hiding the implementaon details and showing only funconality to the user.
+> 1\. **Abstraction** : Abstracon is a process of hiding the implementaon details and showing only funconality to the user.
 >
 > Real world examples:
 >
@@ -22,7 +22,7 @@
 > **-** Abstract classes\
 > **-** Interfaces
 >
-> 2\. **Encapsulaon** : Encapsulaon is a process of *Binding data and methods within a class* . Think of it like showing the essenal details of a class by using the access control modifiers (*public, private,protected* ). So, we can say that Encapsulaon leads to the desired
+> 2\. **Encapsulation** : Encapsulation is a process of *Binding data and methods within a class* . Think of it like showing the essential details of a class by using the access control modifiers (*public, private,protected* ). So, we can say that Encapsulation leads to the desired
 > level of Abstraction.
 >
 > Example:
@@ -41,7 +41,4 @@
 >
 > In Method overloading, two or more methods in one class have the same method name but different arguments. It is called as *Compile time polymorphism* because it is decided at compile me which overloaded method will be called.
 >
-> Overriding means when we have two methods with same name and same
-> parameters in parent and child class. Through overriding, child class
-> can provide specific implementaon for the method which is already
-> defined in the parent class.
+> Overriding means when we have two methods with same name and same parameters in parent and child class. Through overriding, child class can provide specific implementaon for the method which is already defined in the parent class.
