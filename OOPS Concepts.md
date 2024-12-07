@@ -67,11 +67,32 @@
 > ```java
 > package com.tech;
 > public abstract class MyAbstractClass {
-> // abstract method
->    abstract void print();
->  public void display()
-> {
->   System.out.println("In display method");
-> }
-> 
+>
+>    // abstract method
+>     abstract void print();
+>    public void display()
+>   {
+>     System.out.println("In display method");
+>   }
+>
+# AbstractDemo Class Example
+
+This is an example of an `AbstractDemo` class that extends an abstract class and overrides its methods.
+
+```java
+package com.tech;
+
+public class AbstractDemo extends MyAbstractClass {
+	
+    void print() {
+        System.out.println("In Print method");
+    }
+	
+    public static void main(String[] args) {
+        AbstractDemo obj = new AbstractDemo();
+        obj.print();
+        obj.display();
+    }
+}
+
 
