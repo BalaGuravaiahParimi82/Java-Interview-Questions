@@ -1,5 +1,4 @@
 # OOPS Concepts
-This Repo Contains Java Interview Questions
 
 **Question 1: What are the 4 pillars of OOPS?**
 4 pillars of OOPS are:
