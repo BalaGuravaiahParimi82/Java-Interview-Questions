@@ -65,10 +65,17 @@
 > in abstract class
 > *Example:*
 > ```java
-// Java Example
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
+> package com.tech;
+
+public abstract class MyAbstractClass {
+	
+	// abstract method
+	abstract void print();
+	
+	public void display() 
+	{
+		System.out.println("In display method");
+	}
+	
 }
-> 
+
