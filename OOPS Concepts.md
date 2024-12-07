@@ -8,21 +8,11 @@ Real world examples:- TV remote: To start the TV, you have to press the power bu
 In java, Abstraction can be achieved in two ways:- 
 -Abstract classes
 - Interfaces
-2. Encapsulation : Encapsulation on is a process of Binding data and
- methods within a class . Think of it like showing the essential
- details of a class by using the access control modifiers (public,
- private, protected ). So, we can say that Encapsulation leads
- to the desired level of Abstraction.
- Example:
-Java Bean, where all data members are made private and you
- define certain public methods to the outside world to access
- them.
- 3. Inheritance : Using inheritance means defining a parent-child
- relationship between classes, by doing so, you can reuse the
- code that is already defined in the parent class. Code
- reusability is the biggest advantage of Inheritance.
- Java does not allow mul ple inheritance through classes but it
- allows it through interfaces.
+**Encapsulation :** Encapsulation on is a process of Binding data and methods within a class . Think of it like showing the essential details of a class by using the access control modifiers (public,private, protected ). So, we can say that Encapsulation leads to the desired level of Abstraction.
+Example:
+Java Bean, where all data members are made private and you define certain public methods to the outside world to access them.
+**Inheritance :** Using inheritance means defining a parent-child relationship between classes, by doing so, you can reuse the code that is already defined in the parent class. Code reusability is the biggest advantage of Inheritance.
+ Java does not allow multiple inheritance through classes but it allows it through interfaces.
  4. Polymorphism : Poly means many and Morph means forms.
  Polymorphism is the process in which an object or func on
  takes different forms.
