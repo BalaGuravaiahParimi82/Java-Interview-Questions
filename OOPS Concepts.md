@@ -79,9 +79,8 @@ public abstract class MyAbstractClass {
         System.out.println("In display method");
     }
 }
-//////
 
-
+###Overriding Abstract Class
 This is an example of an `AbstractDemo` class that extends an abstract class and overrides its methods.
 
 ```java
