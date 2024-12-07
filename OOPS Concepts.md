@@ -43,3 +43,23 @@
 > In Method overloading, two or more methods in one class have the same method name but different arguments. It is called as *Compile time polymorphism* because it is decided at compile time which overloaded method will be called.
 >
 > Overriding means when we have two methods with same name and same parameters in parent and child class. Through overriding, child class can provide specific implementation for the method which is already defined in the parent class.
+
+
+> ***Question 2: What is an abstract class?***
+>
+> Answer: A class that is declared using "abstract" keyword is known as
+> abstract class. It can have abstract methods (methods without body) as
+> well as concrete methods (methods with body).
+>
+> Some points to remember:
+>
+> **-** An abstract class cannot be instanated, which means you are not
+> allowed to create an object of the abstract class. This also means, an
+> abstract class has no use unless it is extended by some other class
+>
+> **-** If there is any abstract method in a class then that class must
+> be declared abstract
+>
+> **-** The first non-abstract class which is extending from an abstract
+> class will have to give implementaon of the abstract methods defined
+> in abstract class
