@@ -66,16 +66,12 @@
 > *Example:*
 > ```java
 > package com.tech;
-
-public abstract class MyAbstractClass {
-	
-	// abstract method
-	abstract void print();
-	
-	public void display() 
-	{
-		System.out.println("In display method");
-	}
-	
-}
+> public abstract class MyAbstractClass {
+> // abstract method
+>    abstract void print();
+>  public void display()
+> {
+>   System.out.println("In display method");
+> }
+> 
 
