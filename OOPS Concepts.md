@@ -1,37 +1,67 @@
-Question 1: What are the 4 pillars of OOPS?
-The 4 pillars of OOPS are:
-
-Abstraction
-Abstraction is a process of hiding the implementation details and showing only functionality to the user.
-
-Real-world examples:
-
-TV remote: To start the TV, you have to press the power button. You don’t have to know about the internal circuit operations, like how infrared waves are passing.
-Car gears: We know what happens when we change the gear, but we don’t know how changing gear works under the hood. That information is irrelevant to us, so it is abstracted.
-In Java, Abstraction can be achieved in two ways:
-
-Abstract classes
-Interfaces
-Encapsulation
-Encapsulation is a process of binding data and methods within a class. Think of it as showing the essential details of a class by using access control modifiers (public, private, protected).
-
-Example:
-A Java Bean, where all data members are made private and you define certain public methods to the outside world to access them.
-
-Encapsulation leads to the desired level of Abstraction.
-
-Inheritance
-Inheritance defines a parent-child relationship between classes. By doing so, you can reuse the code that is already defined in the parent class.
-
-Advantage: Code reusability is the biggest benefit of Inheritance.
-
-Java Restriction:
-Java does not allow multiple inheritance through classes but allows it through interfaces.
-
-Polymorphism
-Poly means many, and Morph means forms. Polymorphism is the process in which an object or function takes different forms.
-
-Types of Polymorphism:
-
-Compile-Time Polymorphism (Method Overloading): Two or more methods in one class have the same name but different arguments. It is decided at compile time which overloaded method will be called.
-Run-Time Polymorphism (Method Overriding): When we have two methods with the same name and parameters in parent and child classes. Through overriding, the child class can provide a specific implementation for a method already defined in the parent class.
+> ***Question 1: What are the 4 pillars of OOPS?***
+>
+> Answer: 4 pillars of OOPS are:
+>
+> 1\. Abstracon\
+> 2. Encapsulaon\
+> 3. Inheritance\
+> 4. Polymorphism
+>
+> Let's take a look at them:
+>
+> 1\. **Abstracon** : Abstracon is a process of hiding the\
+> implementaon details and showing only funconality to the user.
+>
+> Real world examples:
+>
+> **-** TV remote: To start the TV, you have to press the power buon,
+> you don't have to know about the internal circuit operaons like how
+> infrared waves are passing.
+>
+> **-** Car gears: We know what happens when we change the gear. But we
+> don't know how changing gear works under the hood, that informaon is
+> irrelevant to us, so it is abstracted.
+>
+> In java, Abstracon can be achieved in two ways:
+>
+> **-** Abstract\
+> classes
+>
+> **-** Interfaces
+>
+> 2\. **Encapsulaon** : Encapsulaon is a process of *Binding data and
+> methods within a class* . Think of it like showing the essenal details
+> of a class by using the access control modifiers (*public, private,
+> protected* ). So, we can say that Encapsulaon leads to the desired
+> level of Abstracon.
+>
+> Example:
+>
+> Java Bean, where all data members are made private and you define
+> certain public methods to the outside world to access them.
+>
+> 3\. **Inheritance** : Using inheritance means defining a parent-child
+> relaonship between classes, by doing so, you can reuse the code that
+> is already defined in the parent class. Code\
+> reusability is the biggest advantage of Inheritance.
+>
+> Java does not allow mulple inheritance through classes but it allows
+> it through interfaces.
+>
+> 4\. **Polymorphism** : Poly means many and Morph means forms.
+> Polymorphism is the process in which an object or funcon takes
+> different forms. There are 2 types of Polymorphism :
+>
+> **-** Compile Time Polymorphism (Method Overloading)
+>
+> **-** Run Time Polymorphism (Method Overriding)
+>
+> In Method overloading, two or more methods in one class have the same
+> method name but different arguments. It is called as *Compile me
+> polymorphism* because it is decided at compile me which overloaded
+> method will be called.
+>
+> Overriding means when we have two methods with same name and same
+> parameters in parent and child class. Through overriding, child class
+> can provide specific implementaon for the method which is already
+> defined in the parent class.
