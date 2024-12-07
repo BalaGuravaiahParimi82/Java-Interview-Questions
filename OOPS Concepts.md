@@ -8,18 +8,18 @@ This Repo Contains Java Interview Questions
  3. Inheritance
  4. Polymorphism
  Let’s take a look at them:
- **1. Abstraction**: Abstraction is a process of hiding the
- implementation details and showing only functionality to the
- user.
- Real world examples:- TV remote: To start the TV, you have to press the power
- bu on, you don’t have to know about the internal circuit
- opera ons like how infrared waves are passing.- Car gears: We know what happens when we change the
- gear. But we don’t know how changing gear works under
- the hood, that informa on is irrelevant to us, so it is
- abstracted.
- In java, Abstraction can be achieved in two ways:- Abstract
- classes- Interfaces
- 2. Encapsulation : Encapsulation on is a process of Binding data and
+**1. Abstraction**: Abstraction is a process of hiding the
+implementation details and showing only functionality to the
+user.
+Real world examples:- TV remote: To start the TV, you have to press the power
+bu on, you don’t have to know about the internal circuit
+opera ons like how infrared waves are passing.- Car gears: We know what happens when we change the
+gear. But we don’t know how changing gear works under
+the hood, that informa on is irrelevant to us, so it is
+abstracted.
+In java, Abstraction can be achieved in two ways:- Abstract
+classes- Interfaces
+2. Encapsulation : Encapsulation on is a process of Binding data and
  methods within a class . Think of it like showing the essential
  details of a class by using the access control modifiers (public,
  private, protected ). So, we can say that Encapsulation leads
