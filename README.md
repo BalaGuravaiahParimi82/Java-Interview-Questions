@@ -3,17 +3,17 @@
 > **More Than 200 Questions To Crack The Java, Spring, Spring Boot & Hibernate Interview**
 
 ## 📝 Table of Contents
-- [Introduction](#introduction)
-- [OOP Concepts](#oop-concepts)
-- [Java Basics](#java-basics)
-- [Exception Handling](#exception-handling)
-- [Strings](#strings)
-- [Collections & Generics](#collections--generics)
-- [Multithreading](#multithreading)
-- [Spring & Spring Boot](#spring--spring-boot)
-- [JPA & Hibernate](#jpa--hibernate)
-- [SQL & Database](#sql--database)
-- [References](#references)
+- [Introduction](#📌-introduction)
+- [OOP Concepts](#📚-oop-concepts)
+- [Java Basics](#🔹-java-basics)
+- [Exception Handling](#🔥-exception-handling)
+- [Strings](#📌-strings)
+- [Collections & Generics](#🔄-collections--generics)
+- [Multithreading](#🔀-multithreading)
+- [Spring & Spring Boot](#☕-spring--spring-boot)
+- [JPA & Hibernate](#🔗-jpa--hibernate)
+- [SQL & Database](#📂-sql--database)
+- [References](#📖-references)
 
 ---
 
