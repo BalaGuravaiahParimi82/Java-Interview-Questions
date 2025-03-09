@@ -80,213 +80,178 @@ Program continues...
 
 ---
 
-## Question 17: How to Handle Exceptions in Java?
+## Question 22: Exception Handling with Method Overriding
 
-**Java uses the `try-catch` block for exception handling.**  
-- A `try` block must be followed by at least one `catch` or `finally` block.
-- **You cannot write a `try` block alone.**
+### **Rules:**
+1. **If the parent class method does not declare an exception, the child class cannot throw a checked exception.**
+   
+   ```java
+   class Parent {
+       public void hello() {
+           System.out.println("Parent class hello method");
+       }
+   }
 
-### Example:
+   class Child extends Parent {
+       public void hello() throws IOException { // ❌ Compilation Error
+           System.out.println("Child class hello method");
+       }
+   }
+   ```
 
-```java
-public class ExceptionHandlingExample {
-    public static void main(String[] args) {
-        try {
-            int result = 10 / 0; // Throws ArithmeticException
-            System.out.println("Result: " + result);
-        } catch (ArithmeticException e) {
-            System.out.println("Exception caught: " + e.getMessage());
-        } finally {
-            System.out.println("Finally block executed");
-        }
-    }
-}
-```
+   **Error:**
+   ```
+   Exception IOException is not compatible with throws clause in Parent.hello()
+   ```
 
-**Output:**
-```
-Exception caught: / by zero
-Finally block executed
-```
+2. **A child class can throw an unchecked exception even if the parent class method does not declare one.**
 
----
+   ```java
+   class Parent {
+       public void hello() {
+           System.out.println("Parent class hello method");
+       }
+   }
 
-## Question 18: Can we write a `try` block without a `catch` block?
+   class Child extends Parent {
+       public void hello() throws ArithmeticException { // ✅ Allowed
+           System.out.println("Child class hello method");
+       }
+   }
 
-Yes, we **can** write a `try` block **with a `finally` block**, but we **cannot** write a `try` block alone.
+   public class TestException {
+       public static void main(String[] args) {
+           Parent p = new Child();
+           p.hello();
+       }
+   }
+   ```
 
-### Example:
+   **Output:**
+   ```
+   Child class hello method
+   ```
 
-```java
-public class TryFinallyExample {
-    public static void main(String[] args) {
-        try {
-            System.out.println("Inside try block");
-        } finally {
-            System.out.println("Finally block executed");
-        }
-    }
-}
-```
+3. **If a child class method throws a broader exception than the parent class method, it results in a compilation error.**
 
-**Output:**
-```
-Inside try block
-Finally block executed
-```
+   ```java
+   class Parent {
+       public void hello() throws ArithmeticException {
+           System.out.println("Parent class hello method");
+       }
+   }
 
----
+   class Child extends Parent {
+       public void hello() throws Exception { // ❌ Compilation Error
+           System.out.println("Child class hello method");
+       }
+   }
+   ```
 
-## Question 19: Handling Multiple Exceptions
+   **Error:**
+   ```
+   Exception Exception is not compatible with throws clause in Parent.hello()
+   ```
 
-Java provides **two ways** to handle multiple exceptions:
-1. **Multiple `catch` blocks**
-2. **Single `catch` block using the `|` (pipe) operator**
+4. **A child class can throw the same exception as the parent class.**
 
-### Example: Using multiple `catch` blocks
+   ```java
+   class Parent {
+       public void hello() throws Exception {
+           System.out.println("Parent class hello method");
+       }
+   }
 
-```java
-public class MultipleCatchExample {
-    public static void main(String[] args) {
-        try {
-            int arr[] = new int[5];
-            arr[10] = 50; // Throws ArrayIndexOutOfBoundsException
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Array index out of bounds: " + e.getMessage());
-        } catch (ArithmeticException e) {
-            System.out.println("Arithmetic Exception: " + e.getMessage());
-        }
-    }
-}
-```
+   class Child extends Parent {
+       public void hello() throws Exception { // ✅ Allowed
+           System.out.println("Child class hello method");
+       }
+   }
 
-### Example: Using `|` operator
+   public class TestException {
+       public static void main(String[] args) {
+           Parent p = new Child();
+           try {
+               p.hello();
+           } catch (Exception e) {
+               System.out.println("Handled");
+           }
+       }
+   }
+   ```
 
-```java
-public class MultiCatchExample {
-    public static void main(String[] args) {
-        try {
-            int number = Integer.parseInt("abc"); // Throws NumberFormatException
-        } catch (NumberFormatException | NullPointerException e) {
-            System.out.println("Exception caught: " + e.getMessage());
-        }
-    }
-}
-```
+   **Output:**
+   ```
+   Child class hello method
+   ```
 
-**Output:**
-```
-Exception caught: For input string: "abc"
-```
+5. **A child class method can declare a narrower exception than the parent class method.**
 
----
+   ```java
+   import java.io.IOException;
 
-## Question 20: When does the `finally` block **not** get executed?
+   class Parent {
+       public void hello() throws Exception {
+           System.out.println("Parent class hello method");
+       }
+   }
 
-- When **`System.exit()`** is called.
-- When the **JVM crashes**.
+   class Child extends Parent {
+       public void hello() throws IOException { // ✅ Allowed
+           System.out.println("Child class hello method");
+       }
+   }
 
----
+   public class TestException {
+       public static void main(String[] args) {
+           Parent p = new Child();
+           try {
+               p.hello();
+           } catch (Exception e) {
+               System.out.println("Handled");
+           }
+       }
+   }
+   ```
 
-## Question 21: Difference between `throw` and `throws` & Exception Propagation
+   **Output:**
+   ```
+   Child class hello method
+   ```
 
-### **`throw` vs `throws`**
-| `throw`  | `throws`  |
-|----------|----------|
-| Used to **explicitly throw** an exception. | Used to **declare exceptions** in method signature. |
-| Follows an **exception instance**. | Follows **exception class names**. |
-| Only **one** exception can be thrown at a time. | Multiple exceptions can be declared. |
+6. **If the parent class method declares an exception, the child class can override it without declaring an exception.**
 
----
+   ```java
+   class Parent {
+       public void hello() throws Exception {
+           System.out.println("Parent class hello method");
+       }
+   }
 
-### **Exception Propagation**
-- When a method throws an **unchecked exception**, it **propagates up** the call stack until it is caught.
-- Checked exceptions **do not propagate automatically**; they must be handled or declared using `throws`.
+   class Child extends Parent {
+       public void hello() { // ✅ Allowed (No exception)
+           System.out.println("Child class hello method");
+       }
+   }
 
-### Example: **Unchecked Exception Propagation**
+   public class TestException {
+       public static void main(String[] args) {
+           Parent p = new Child();
+           try {
+               p.hello();
+           } catch (Exception e) {
+               System.out.println("Handled");
+           }
+       }
+   }
+   ```
 
-```java
-public class UncheckedExceptionPropagation {
-    static void m3() {
-        throw new ArithmeticException("Exception thrown in m3");
-    }
-    static void m2() {
-        m3();
-    }
-    static void m1() {
-        m2();
-    }
-    public static void main(String[] args) {
-        m1();
-    }
-}
-```
-
-**Output:**
-```
-Exception in thread "main" java.lang.ArithmeticException: Exception thrown in m3
-```
-
----
-
-### Example: **Handling Unchecked Exceptions**
-
-```java
-public class HandledUncheckedException {
-    static void m3() {
-        throw new ArithmeticException("Exception thrown in m3");
-    }
-    static void m2() {
-        try {
-            m3();
-        } catch (ArithmeticException e) {
-            System.out.println("Exception caught in m2: " + e.getMessage());
-        }
-    }
-    static void m1() {
-        m2();
-    }
-    public static void main(String[] args) {
-        m1();
-        System.out.println("Program continues...");
-    }
-}
-```
-
-**Output:**
-```
-Exception caught in m2: Exception thrown in m3
-Program continues...
-```
+   **Output:**
+   ```
+   Child class hello method
+   ```
 
 ---
 
-## Example: **Checked Exception Propagation (Handled with `throws`)**
-
-```java
-import java.io.*;
-
-public class CheckedExceptionUsingThrows {
-    static void m3() throws IOException {
-        throw new IOException("Checked Exception in m3");
-    }
-    static void m2() throws IOException {
-        m3();
-    }
-    static void m1() throws IOException {
-        m2();
-    }
-    public static void main(String[] args) {
-        try {
-            m1();
-        } catch (IOException e) {
-            System.out.println("Exception handled in main: " + e.getMessage());
-        }
-    }
-}
-```
-
-**Output:**
-```
-Exception handled in main: Checked Exception in m3
-```
+This document provides a comprehensive understanding of **exception handling in Java**, including **try-catch, multiple exceptions, exception propagation, and method overriding rules**.  
+Let me know if you need any modifications!
